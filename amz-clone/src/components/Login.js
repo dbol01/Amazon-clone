@@ -12,8 +12,7 @@ function Login() {
     e.preventDefault();
     auth
       .signInWithEmailAndPassword(email, password)
-      .then((auth) => {
-        console.log("auth res", auth);
+      .then(() => {
         history.push("/");
       })
       .catch((e) => alert(e.message));
@@ -23,8 +22,7 @@ function Login() {
     e.preventDefault();
     auth
       .createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
-        console.log("auth res", auth);
+      .then(() => {
         history.push("/");
       })
       .catch((e) => alert(e.message));

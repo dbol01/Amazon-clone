@@ -8,12 +8,11 @@ import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
     auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
-        console.log("userAuth", userAuth);
         dispatch({
           type: "SET_USER",
           payload: { user: userAuth },

@@ -45,6 +45,11 @@
   justify-content: space-evenly;
 }
 
+.header__link {
+  display: flex;
+  flex-direction: column;
+}
+
 .header__linkLineOne {
   font-size: 10px;
 }
